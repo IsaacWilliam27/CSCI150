@@ -1,0 +1,57 @@
+/* Basic Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px; /* Initially hidden */
+  width: 260px;
+  height: 100%;
+  background-color: #263043;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+  z-index: 100;
+  color: #9e9ea4;
+}
+
+/* Open Sidebar */
+.sidebar.sidebar-open {
+  transform: translateX(260px);
+}
+
+/* Sidebar title */
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.close_icon {
+  color: red;
+  cursor: pointer;
+}
+
+.sidebar-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar-list-item {
+  padding: 15px;
+  color: #9e9ea4;
+  cursor: pointer;
+}
+
+.sidebar-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Overlay when sidebar is open */
+.overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
